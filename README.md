@@ -1,26 +1,41 @@
 # bit-repo_05
 
 ## Términos y conceptos
-- Dispositivo (Hardware, Software, Sistema operativo, Aplicación)
-- Instalar aplicaciones
+* Dispositivo
+  - Hardware
+  * Software
+    - Sistema operativo
+    - Aplicación
+* Instalar aplicaciones
+  * Editor de código
+    - Extensiones
+  * Navegador web
+    - Herramientas del desarrollador
 - Estructura de archivos y carpetas
 - Interfaz gráfica
 - Interfaz de línea de comandos
 - Sistema de control de versiones
 - Alojamiento de control de versiones
-- Repositorio
+* Repositorio
+  - Comandos de uso básico
+  - Ramas
 * Markdown
   - Sintaxis
-- Editor de código
+  - Mejores prácticas
 * HTML
-  - ¿Qué es y para qué sirve?
+  - Sintaxis
   - Comentarios
-  - Enlaces
+  - Mejores prácticas
   * Etiquetas
+    - Base
+    - Metadata
+    - Enlaces
+    - Jerarquía
     - Tipos
     - Genéricas
     * Semánticas
-      - Estructura
+      * Estructura
+        - Subestructura
       * Contenido
         - Tipográfico
         - Listas
@@ -28,3 +43,6 @@
         - Formularios
         - Multimedia
         - Frames
+    - SEO
+    - Validación
+    - Accesibilidad
