@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- Soy un comentario -->
+<html lang="es">
+  <head>
+    <title>HTML</title>
+  </head>
+  <body>
+    <!-- Enlaces -->
+    <a href="https://bit.institute/" target="_blank" rel="noopener noreferrer"
+      >Enlace externo 1</a
+    >
+    <a href="https://google.com/" target="_blank" rel="noopener noreferrer"
+      >Enlace externo 2</a
+    >
+    <hr />
+    <!-- Tipos de etiquetas -->
+    <!-- tipo bloque -->
+    <div>contenido del div</div>
+    <div>contenido del div</div>
+    <!-- tipo línea -->
+    <span>contenido del span</span>
+    <span>contenido del span</span>
+    <hr />
+    <!-- Etiquetas genéricas -->
+    <div>contenido del div</div>
+    <span>contenido del span</span>
+    <hr />
+    <!-- Etiquetas semánticas -->
+    <!-- Estructura -->
+    <header>encabezados...</header>
+    <nav>navegación...</nav>
+    <main>
+      principal...
+      <section>seccionar...</section>
+      <article>artículo...</article>
+    </main>
+    <aside>secundario...</aside>
+    <footer>pie de página...</footer>
+    <hr />
+    <!-- Contenido -->
+    <!-- Tipográfico -->
+    <h1>título principal o de primer nivel...</h1>
+    <h2>título de nivel 2...</h2>
+    <h3>título de nivel 3...</h3>
+    <h4>título de nivel 4...</h4>
+    <h5>título de nivel 5...</h5>
+    <h6>título de nivel 6...</h6>
+    <p>párrafo...</p>
+    <p>párrafo... <strong>destacado...</strong> <em>énfasis...</em></p>
+    <hr />
+    <!-- Listas -->
+    <ul>
+      <li>elemento 1</li>
+      <li>elemento 2</li>
+      <li>elemento 3</li>
+    </ul>
+    <ol>
+      <li>elemento 1</li>
+      <li>elemento 2</li>
+      <li>elemento 3</li>
+    </ol>
+    <dl>
+      <dt>HTML</dt>
+      <dd>HyperText Markup Language</dd>
+    </dl>
+    <hr />
+    <!-- Tablas -->
+    <table>
+      <thead>
+        <tr>
+          <th>encabezado 1</th>
+          <th>encabezado 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>celda 1</td>
+          <td>celda 2</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>pie 1</td>
+          <td>pie 2</td>
+        </tr>
+      </tfoot>
+    </table>
+    <hr />
+    <!-- Formularios -->
+    <form>
+      <label for="name">Nombre</label>
+      <input type="text" id="name" placeholder="Escriba su nombre..." />
+      <label>
+        Apellido
+        <input type="text" placeholder="Escriba su apellido..." />
+      </label>
+      <label>
+        Email
+        <input type="email" />
+      </label>
+      <label>
+        Password
+        <input type="password" />
+      </label>
+      <label>
+        Number
+        <input type="number" />
+      </label>
+      <label>
+        ¿Casado?
+        <label>Si <input type="radio" name="married" value="Si" /></label>
+        <label>No <input type="radio" name="married" value="No" /></label>
+      </label>
+      <label>
+        ¿Qué tecnologías domina?
+        <label><input type="checkbox" value="html" />HTML</label>
+        <label><input type="checkbox" value="css" />CSS</label>
+        <label><input type="checkbox" value="js" />JS</label>
+      </label>
+      <label>
+        Fechas
+        <input type="date" />
+      </label>
+      <label>
+        Mensaje:
+        <textarea></textarea>
+      </label>
+      <label
+        >Selección...
+        <select name="country">
+          <option value="co">Colombia</option>
+          <option value="ve">Venezuela</option>
+          <option value="pe">Perú</option>
+        </select>
+      </label>
+      <label
+        >Adjuntar archivo...
+        <input type="file" />
+      </label>
+      <!-- <input type="submit" value="Enviar" /> -->
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpiar</button>
+    </form>
+    <hr />
+    <!-- Multimedia -->
+    <figure>
+      <img src="sample.jpeg" alt="texto alternativo de la imagen" />
+      <figcaption>HTML</figcaption>
+    </figure>
+    <video src="sample.mp4" controls></video>
+    <audio src="sample.mp3" controls></audio>
+    <hr />
+    <!-- Frames -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d63629.71661074288!2d-74.14241665171846!3d4.619537560865726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sco!4v1694570048358!5m2!1sen!2sco"
+      width="400"
+      height="300"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <iframe
+      width="1847"
+      height="956"
+      src="https://www.youtube.com/embed/BHcAXHfUpyA"
+      title="Nikon D7500: Time-lapse sample video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
