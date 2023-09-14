@@ -39,7 +39,7 @@ const devs = [
   { name: 'NATALI  GÓMEZ URRUTIA', web: null, github: null },
   {
     name: 'RAUL SANTIAGO RAMIREZ PUYO',
-    web: 'https://github.com/Designedby-Radol/git-00',
+    web: 'https://designedby-radol.github.io/git-00/',
     github: 'https://github.com/Designedby-Radol',
   },
   {

@@ -1,0 +1,33 @@
+:root {
+  --c-primary: #00bbf9;
+  --c-secondary: #8d99ae;
+  --c-danger: #f15bb5;
+  --c-warning: #fee440;
+  --c-success: #00f5d4;
+  --ff-base: 'Montserrat', sans-serif;
+  --fs-base: 18px;
+  --ff-title: 'Playfair Display', serif;
+  --fs-title: 24px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-base);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-title);
+  font-size: var(--fs-title);
+}
+.material-symbols-outlined {
+  font-size: 64px;
+}
