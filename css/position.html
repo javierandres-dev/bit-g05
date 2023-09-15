@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .padre {
+        border: 2px solid black;
+        width: 300px;
+        height: 300px;
+        position: relative;
+        /*
+position: static;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+z-index: 0;
+*/
+      }
+      .hijo1 {
+        background-color: blue;
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+      }
+      .hijo2 {
+        background-color: red;
+        position: relative;
+        z-index: 1;
+      }
+      .hermano {
+        width: 150px;
+        height: 150px;
+      }
+    </style>
+    <title>Posición</title>
+  </head>
+  <body>
+    <!-- Posición -->
+    <div class="padre">
+      <div class="hermano hijo1"></div>
+      <div class="hermano hijo2"></div>
+    </div>
+  </body>
+</html>
