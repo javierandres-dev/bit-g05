@@ -46,3 +46,60 @@
     - SEO
     - Validación
     - Accesibilidad
+* CSS
+  - Sintaxis
+  - Keywords
+  - Comentarios
+  - Implementación
+  * Reglas
+    - Selector / Agrupación de selectores
+    - Bloque de declaración / declaraciones
+    - Predeterminadas
+    - Contenedor
+    * Contenido
+      - Textos
+      - Contenedores
+  - Modelo de caja
+  * Unidades
+    - Absolutas
+    - Relativas
+  - Jerarquía
+  - Herencia
+  - Sobreescritura
+  - Especificidad
+  - Pseudo elementos
+  - Pseudo clases
+  - Propiedades personalizadas
+  - Posición
+  - Layout
+  - Responsivo
+  - Adaptativo
+  - Primer enfoque
+* JavaScript
+  - Motor de JS
+  - Script
+  - Implementación
+  - Sintaxis
+  - Keywords
+  - Comentarios
+  - noscript
+  - Sentencia
+  - El objeto global
+  - Interacción
+  - Declaración
+  - Variables
+  - Constantes
+  - Ámbito de las variables
+  - Modo estricto
+  - Tipos de dato primitivos
+  - Operador typeof
+  - Conversión de tipos
+  - Truthy and Falsy
+  - Operadores
+  - Secuencia
+  - Control de flujo
+  * Estructuras de control
+    - Condicionales
+    - Ciclos
+  - Tipos de dato no primitivos
+  - Operador instanceof
