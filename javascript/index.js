@@ -271,3 +271,140 @@ console.log(typeof obj);
 console.log(obj instanceof Object);
 console.log(obj instanceof Array);
 */
+
+// Funciones
+/* function funcionDeclarada() {
+  console.log('Hola, soy una función declarada');
+}
+funcionDeclarada(); */
+
+/* const funcionExpresada = function () {
+  console.log('Hola, soy una función expresada');
+};
+funcionExpresada(); */
+
+/* const funcionFlecha = () => {
+  console.log('Hola, soy una función flecha');
+};
+funcionFlecha(); */
+
+/* (function () {
+  console.log('Hola, soy una IIFE con keyword function');
+})(); */
+
+/* (() => {
+  console.log('Hola, soy una IIFE con función flecha');
+})(); */
+
+function funcionConParametros(parametro1, parametro2) {
+  console.log('parametro1:', parametro1);
+  console.log('parametro2:', parametro2);
+  return 'soy un string retornado';
+}
+
+//const retornado = funcionConParametros('argumento1', 'argumento2');
+//console.log(retornado);
+
+// This
+//console.log('raíz del script, this:', this);
+
+function unaFuncion() {
+  console.log('Dentro de unaFuncion this:', this);
+}
+//unaFuncion();
+
+const unaFuncionFlecha = () => {
+  console.log('Dentro de unaFuncionFlecha this:', this);
+};
+//unaFuncionFlecha();
+
+// Hoisting
+/* funcionDeclarada();
+function funcionDeclarada() {
+  console.log('Hola, soy una función declarada');
+} */
+
+/* funcionFlecha();
+const funcionFlecha = () => {
+  console.log('Hola, soy una función flecha');
+}; */
+
+/*
+0. Modo estricto
+1. Importaciones
+2. Constantes, Variables
+3. o 4. Funciones
+4. o 3. Código
+*/
+
+// Destructurar
+/* const arrNevera = ['queso', 'lechuga', 'jamón', 'hielo', 'leche', '...n'];
+const [el1, el2, el3] = arrNevera;
+console.log(el1, el2, el3);
+console.log(arrNevera); */
+
+/* const objNevera = {
+  hielo: 'cubitos',
+  queso: 'tajado',
+  leche: 'entera',
+  lechuga: 'crespa',
+  jamon: 'de pavo',
+};
+const { queso, lechuga, jamon } = objNevera;
+console.log(queso, lechuga, jamon); */
+
+// Argumentos Rest
+/* function mostrarNombres(...nombres) {
+  console.log(nombres);
+}
+mostrarNombres('tatiana', 'luisa', 'sara'); */
+
+// Operador Spread
+/* const ellas = ['tatiana', 'luisa', 'sara'];
+const ellos = [
+  'guillermo',
+  'jose',
+  'raúl',
+  'mauricio',
+  'mateo',
+  'andrés',
+  'sergio',
+  'hector',
+];
+const todos = [...ellas, ...ellos];
+console.log(todos); */
+
+// Sincrónico
+function funcionSincronica() {
+  console.log('cosa 1');
+  console.log('cosa 2');
+  console.log('cosa 3');
+}
+//funcionSincronica();
+
+// Asíncrono
+function ejemploFuncionAsincrona() {
+  console.log('cosa 1');
+  setTimeout(() => {
+    console.log('cosa 2');
+  }, 3000);
+  console.log('cosa 3');
+}
+//ejemploFuncionAsincrona();
+
+// Callback
+
+// Promesa
+function funcionPromesa() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({ mensaje: 'Si cumplió, todo bien' });
+    }, 1000);
+  });
+}
+
+async function usandoFuncionPromesa() {
+  const retornado = await funcionPromesa();
+  console.log(retornado);
+}
+usandoFuncionPromesa();
