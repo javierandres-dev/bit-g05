@@ -395,10 +395,12 @@ function ejemploFuncionAsincrona() {
 // Callback
 
 // Promesa
-function funcionPromesa() {
+/* function funcionPromesa() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve({ mensaje: 'Si cumplió, todo bien' });
+      resolve({ mensaje: 'Se resuelve, todo bien' });
+      resolve({ mensaje: 'Se resuelve, algo salió mal' });
+      reject({ mensaje: 'Error, no se pudo resolver' });
     }, 1000);
   });
 }
@@ -407,4 +409,24 @@ async function usandoFuncionPromesa() {
   const retornado = await funcionPromesa();
   console.log(retornado);
 }
-usandoFuncionPromesa();
+usandoFuncionPromesa(); */
+
+// API's
+/*
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then((response) => response.json())
+  .then((json) => console.log(json))
+  .catch((error) => console.log('Rechazo! Hubo un error:', error));
+*/
+/*
+async function obtenerUsuarios() {
+  try {
+    let respuesta = await fetch('https://jsonplaceholder.typicode.com/users');
+    respuesta = await respuesta.json();
+    console.log(respuesta);
+  } catch (error) {
+    console.log('Rechazo! Hubo un error:', error);
+  }
+}
+obtenerUsuarios();
+*/

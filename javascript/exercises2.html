@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios 2</title>
+  </head>
+  <body>
+    <h1>Ejercicios 2</h1>
+    <figure>
+      <img src="" alt="" />
+    </figure>
+    <button>Botón</button>
+    <script>
+      const $btn = document.querySelector('button');
+      const $img = document.querySelector('img');
+
+      $btn.addEventListener('click', obtenerDato);
+
+      async function obtenerDato() {
+        try {
+          let respuesta = await fetch('https://random-d.uk/api/v2/random');
+          respuesta = await respuesta.json();
+          $img.setAttribute('src', respuesta.url);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    </script>
+  </body>
+</html>
