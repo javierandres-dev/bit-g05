@@ -103,3 +103,26 @@
     - Ciclos
   - Tipos de dato no primitivos
   - Operador instanceof
+  * Funciones
+    - Declaración
+    - Expresión
+    - IIFE
+    - Parámetro
+    - Argumento
+    - Retorno
+  - This
+  - Hoisting
+  - Destructurar
+  - Rest Argumentos
+  - Operador Spread
+  - Sincrónico
+  - Asíncrono
+  - Promesas
+  - Modularización
+  - API's
+  - Web APIs
+  - Fetch API
+  - Web storage API
+* JSON
+  - Serialización
+  - Deserialización
