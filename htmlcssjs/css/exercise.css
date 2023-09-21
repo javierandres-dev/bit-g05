@@ -1,0 +1,12 @@
+p {
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 2rem;
+}
+.success {
+  background-color: green;
+}
+.danger {
+  background-color: red;
+}
