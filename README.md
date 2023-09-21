@@ -123,6 +123,24 @@
   - Web APIs
   - Fetch API
   - Web storage API
+  * Métodos integrados
+    - String
+    - Number
+    - Boolean
+    - Array
+    - Object
+    - Math
+    - Date
 * JSON
   - Serialización
   - Deserialización
+* HTML, CSS, JavaScript
+  - DOM
+  - Contenido dinámico
+- Metodologías de desarrollo
+- Solución de problemas
+- Manejo de errores
+- Lógica
+- Algoritmia
+- Wireframes
+- Paradigmas de programación
