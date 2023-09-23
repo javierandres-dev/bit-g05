@@ -430,3 +430,189 @@ async function obtenerUsuarios() {
 }
 obtenerUsuarios();
 */
+
+/* Métodos integrados */
+
+// Clase, plantilla
+/* class Galleta {
+  constructor(nombre, molde, sabor, colorante) {
+    this.nombre = nombre;
+    this.molde = molde;
+    this.sabor = sabor;
+    this.colorante = colorante;
+  }
+  harina = 'de trigo';
+  agua = 'pura';
+  mantequilla = 'clarificada';
+  azucar = 'blanca';
+  hornear() {
+    return 'hornear por 20 minutos a 100 grados';
+  }
+} */
+
+// Objeto, instancia de clase
+/* const galleta1 = new Galleta('ducales', 'rombo', 'queso', 'amarilla');
+console.log(galleta1);
+console.log(typeof galleta1);
+console.log(galleta1.nombre);
+console.log(galleta1.hornear());
+
+const galleta2 = new Galleta('especial', 'cŕculo', 'macdamia', 'blanca');
+console.log(galleta2);
+console.log(typeof galleta2);
+console.log(galleta2['nombre']);
+console.log(galleta2.hornear()); */
+
+//String
+//const dato = new String('hola');
+/* const dato = 'javascript';
+console.log(dato);
+console.log(typeof dato);
+console.log(dato.length); */
+
+/* const password = prompt('ingrese su contraseña:');
+
+if (password.length === 10) {
+  console.log('bien');
+} else {
+  console.log('mal');
+}
+
+let i = 0;
+while (i < 12) {
+  const char = password[i];
+  let len = i;
+  if (char) {
+    len = i + 1;
+    if (len > 10) {
+      console.log('mal');
+      break;
+    }
+  } else {
+    if (len === 10) {
+      console.log('bien!');
+      break;
+    } else {
+      console.log('mal');
+      break;
+    }
+  }
+  i++;
+} */
+let retornado = null;
+
+let str = 'javascript';
+retornado = str.length;
+retornado = str.slice(2, 8);
+retornado = str.slice(8);
+retornado = str.slice(-6);
+retornado = str.substring(2, 8);
+str = 'Hola, DEVS!';
+retornado = str.replace('DEVS', 'Mundo');
+retornado = str.replace('o', 'i');
+str = 'JavaScript';
+retornado = str.toUpperCase();
+retornado = str.toLowerCase();
+let str1 = 'hola';
+let str2 = 'devs';
+retornado = str1.concat(str2);
+retornado = str1.concat(' ', str2);
+retornado = str1.concat(' ', str2, '!');
+str = '    algo    ';
+retornado = str.length;
+retornado = str.trim();
+retornado = retornado.length;
+retornado = str.length;
+retornado = str.trimStart();
+retornado = retornado.length;
+retornado = str.trimEnd();
+retornado = retornado.length;
+str = 'html css javascript';
+retornado = str.split(' ');
+
+// Number
+
+let num = 10;
+retornado = num.toString();
+retornado = num.toExponential(2);
+num = 1.45;
+retornado = num.toFixed(1);
+retornado = num.toFixed(5);
+retornado = parseInt(num);
+retornado = parseFloat(num);
+retornado = Number.isInteger(num);
+
+// Boolean
+let bool = true;
+retornado = bool.toString();
+
+// Arrays
+let ellas = ['sara', 'luisa', 'tatiana'];
+let ellos = [
+  'sergio',
+  'mauricio',
+  'jose',
+  'guillermo',
+  'hector',
+  'mateo',
+  'raúl',
+];
+retornado = ellas.concat(ellos);
+retornado = ellas.join();
+retornado = ellas.join(' y ');
+retornado = ellos.slice(1, 4);
+retornado = [
+  'guillermo',
+  'hector',
+  'jose',
+  'mateo',
+  'mauricio',
+  'raúl',
+  'sergio',
+];
+retornado.splice(2, 0, 'JULIAN', 'CESAR');
+retornado = [
+  'guillermo',
+  'hector',
+  'jose',
+  'mateo',
+  'mauricio',
+  'raúl',
+  'sergio',
+];
+retornado.splice(2, 2);
+retornado = [
+  'guillermo',
+  'hector',
+  'jose',
+  'mateo',
+  'mauricio',
+  'raúl',
+  'sergio',
+];
+retornado.copyWithin(2, 0);
+retornado = [
+  'guillermo',
+  'hector',
+  'jose',
+  'mateo',
+  'mauricio',
+  'raúl',
+  'sergio',
+];
+retornado.pop();
+retornado.shift();
+retornado.push('PEPITA');
+retornado.push('pepa', 'Pepito');
+retornado.unshift('fulanito');
+console.log(ellas);
+ellas.sort();
+console.log(ellas);
+ellas.reverse();
+console.log(ellas);
+console.log(ellos);
+ellos.sort();
+console.log(ellos);
+ellos.reverse();
+console.log(ellos);
+//console.log(retornado);
