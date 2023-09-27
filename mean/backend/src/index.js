@@ -1,4 +1,5 @@
 // Entry point, punto de entrada de mi app
+require('dotenv').config();
 require('./database');
 const server = require('./server');
 
