@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
 mongoose
-  .connect(process.env.ATLAS_URI)
-  .then((db) => console.log('Success! Database connected.'))
-  .catch((err) => console.log("Fail! Database isn't connected."));
+  .connect(process.env.MONGODB_ATLAS_URI)
+  .then((db) => console.log('Successfully! Database connected.'))
+  .catch((err) => console.log("Failed. Database isn't connected."));
