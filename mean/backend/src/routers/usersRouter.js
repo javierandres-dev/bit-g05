@@ -3,7 +3,6 @@ const usersController = require('../controllers/usersController');
 
 const usersRouter = Router();
 
-//Endpoints - CRUD: Create, Read, Update, Delete.
 usersRouter.post('/', usersController.createUser);
 usersRouter.get('/', usersController.readAllUsers);
 usersRouter.get('/:id', usersController.readUser);

@@ -8,7 +8,6 @@ const port = process.env.PORT;
 server.set('port', port);
 
 server.use(morgan('dev'));
-server.use(express.json());
 
 server.use('/users/', usersRouter);
 server.get('/', (request, response) => {
