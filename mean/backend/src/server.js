@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const usersRouter = require('./routers/usersRouter');
+const tasksRouter = require('./routers/tasksRouter');
 
 const server = express();
 const port = process.env.PORT;
@@ -11,6 +12,7 @@ server.use(express.json());
 server.use(morgan('dev'));
 
 server.use('/users/', usersRouter);
+server.use('/tasks/', tasksRouter);
 server.get('/', (request, response) => {
   response.json({ message: 'works!' });
 });
