@@ -12,10 +12,10 @@ const usersController = {
         email,
         password: hashPassword,
       });
-      const userCreated = await newUser.save();
+      const createdUser = await newUser.save();
       const token = await getToken({
-        id: userCreated._id,
-        name: userCreated.name,
+        id: createdUser._id,
+        name: createdUser.name,
       });
       response.json(token);
     } catch (error) {
@@ -36,16 +36,28 @@ const usersController = {
       if (user) response.json({ user });
       else throw new Error('User not found.');
     } catch (error) {
+      console.log(error);
       response.json({ error: error.message || 'Fail during read user!' });
     }
   },
   updateUser: async (request, response) => {
     try {
-      const userUpdated = await UserModel.findByIdAndUpdate(
-        request.params.id,
-        request.body
-      );
-      if (userUpdated) response.json({ userUpdated: userUpdated._id });
+      const { name, email, password } = request.body;
+      let updatedUser = null;
+      if (password) {
+        const hashPassword = await bcrypt.hash(password, 10);
+        updatedUser = await UserModel.findByIdAndUpdate(request.params.id, {
+          name,
+          email,
+          password: hashPassword,
+        });
+      } else {
+        updatedUser = await UserModel.findByIdAndUpdate(request.params.id, {
+          name,
+          email,
+        });
+      }
+      if (updatedUser) response.json({ updatedUser: updatedUser._id });
       else throw new Error('User not found.');
     } catch (error) {
       response.json({ error: error.message || 'Fail during update user!' });
