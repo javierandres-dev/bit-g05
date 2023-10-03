@@ -48,7 +48,7 @@ const devs = [
     name: 'RAUL SANTIAGO RAMIREZ PUYO',
     web: 'https://designedby-radol.github.io/git-00/',
     github: 'https://github.com/Designedby-Radol',
-    grades: [4, 3.7, 4.2],
+    grades: [4, 3.7, 4.2, 4.5],
   },
   {
     name: 'NELSON MAURICIO CARVAJAL',
