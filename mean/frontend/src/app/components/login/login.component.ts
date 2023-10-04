@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { LoginService } from '../../services/login.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  constructor(private loginService: LoginService) {}
+  constructor(private loginService: LoginService, private router: Router) {}
 
   user = {
     email: '',
@@ -17,10 +18,13 @@ export class LoginComponent {
   login() {
     this.loginService.login(this.user).subscribe(
       (res) => {
-        console.log(res);
+        if (res.token) {
+          localStorage.setItem('token', res.token);
+          this.router.navigate(['/tasks']);
+        }
       },
       (err) => {
-        console.log(err);
+        console.log('error:', err);
       }
     );
   }

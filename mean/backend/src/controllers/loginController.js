@@ -24,7 +24,6 @@ const loginController = {
       } else {
         response.json({ message: 'Invalid credentials.' });
       }
-      console.log('userFound:', userFound);
     } catch (error) {
       response.json({ message: 'Fail during login user!' });
     }
