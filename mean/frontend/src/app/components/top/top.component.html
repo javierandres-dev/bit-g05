@@ -32,12 +32,19 @@
         </li>
       </ul>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/tasks">Tasks</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/login">Login</a>
-        </li>
+        <ng-container *ngIf="loginService.isLogged(); else logged">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/tasks">Tasks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="loginService.logout()">Logout</a>
+          </li>
+        </ng-container>
+        <ng-template #logged>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+        </ng-template>
       </ul>
     </div>
   </div>

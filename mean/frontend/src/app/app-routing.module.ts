@@ -4,11 +4,12 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { authGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'tasks', component: TasksComponent },
+  { path: 'tasks', component: TasksComponent, canActivate: [authGuard] },
   { path: '**', component: PageNotFoundComponent },
 ];
 
