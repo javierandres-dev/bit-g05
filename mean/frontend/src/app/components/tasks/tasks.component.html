@@ -1,3 +1,25 @@
 <app-top></app-top>
-<main>main content... TASKS</main>
+<main class="container">
+  <h1 class="mt-5">Tasks</h1>
+  <h2>Hello, {{ getUserName() }}!</h2>
+  <form class="my-5">
+    <div class="mb-3">
+      <label for="name" class="form-label">Enter task name</label>
+      <input type="text" class="form-control" id="name" name="name" />
+    </div>
+    <div class="mb-3 form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="completed"
+        name="completed"
+      />
+      <label class="form-check-label" for="completed">Completed</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+  <ul class="list-group" *ngFor="let task of taskService.tasks">
+    <li class="list-group-item my-2">{{ task.name }}</li>
+  </ul>
+</main>
 <app-bottom></app-bottom>
