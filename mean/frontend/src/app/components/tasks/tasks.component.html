@@ -2,24 +2,61 @@
 <main class="container">
   <h1 class="mt-5">Tasks</h1>
   <h2>Hello, {{ getUserName() }}!</h2>
-  <form class="my-5">
+  <form class="my-5" #taskForm="ngForm" (ngSubmit)="handleSubmitTask(taskForm)">
+    <input
+      type="hidden"
+      name="_id"
+      [(ngModel)]="taskService.selectedTask._id"
+    />
     <div class="mb-3">
       <label for="name" class="form-label">Enter task name</label>
-      <input type="text" class="form-control" id="name" name="name" />
-    </div>
-    <div class="mb-3 form-check">
       <input
-        type="checkbox"
-        class="form-check-input"
-        id="completed"
-        name="completed"
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        [(ngModel)]="taskService.selectedTask.name"
       />
-      <label class="form-check-label" for="completed">Completed</label>
     </div>
-    <button type="submit" class="btn btn-primary">Create</button>
+    <ng-container *ngIf="taskService.selectedTask._id; else create">
+      <div class="mb-3 form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="completed"
+          name="completed"
+          [(ngModel)]="taskService.selectedTask.completed"
+        />
+        <label class="form-check-label" for="completed">Completed</label>
+      </div>
+      <button type="submit" class="btn btn-warning">Update</button>
+    </ng-container>
+    <ng-template #create>
+      <button type="submit" class="btn btn-primary">Create</button>
+    </ng-template>
+    <span class="mx-2"></span>
+    <button type="reset" class="btn btn-primary" (click)="resetForm(taskForm)">
+      Reset
+    </button>
   </form>
   <ul class="list-group" *ngFor="let task of taskService.tasks">
-    <li class="list-group-item my-2">{{ task.name }}</li>
+    <li
+      class="list-group-item my-2 d-flex justify-content-between align-items-center"
+    >
+      <div>{{ task.name }}</div>
+      <div class="d-flex gap-4">
+        <button type="button" class="btn btn-info" (click)="editTask(task)">
+          Edit
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="removeTask(task._id)"
+        >
+          Delete
+        </button>
+      </div>
+    </li>
   </ul>
 </main>
 <app-bottom></app-bottom>

@@ -9,22 +9,22 @@ export class TasksService {
   constructor(private http: HttpClient) {}
 
   tasks: Task[] = [];
-
+  selectedTask: Task = {
+    name: '',
+    completed: false,
+  };
   urlBackend = 'http://localhost:4000/tasks';
 
-  createTask() {
-    console.log('createTask...');
+  createTask(task: Task) {
+    return this.http.post(this.urlBackend, task);
   }
   readAllTasks() {
     return this.http.get<any>(this.urlBackend);
   }
-  readTask() {
-    console.log('readTask...');
+  updateTask(task: Task) {
+    return this.http.put(`${this.urlBackend}/${task._id}`, task);
   }
-  updateTask() {
-    console.log('updateTask...');
-  }
-  deleteTask() {
-    console.log('deleteTask...');
+  deleteTask(id: string) {
+    return this.http.delete(`${this.urlBackend}/${id}`);
   }
 }
