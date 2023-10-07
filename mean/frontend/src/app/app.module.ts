@@ -14,6 +14,7 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { TopComponent } from './components/top/top.component';
 import { BottomComponent } from './components/bottom/bottom.component';
+import { ListComponent } from './components/list/list.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { BottomComponent } from './components/bottom/bottom.component';
     PageNotFoundComponent,
     TopComponent,
     BottomComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
