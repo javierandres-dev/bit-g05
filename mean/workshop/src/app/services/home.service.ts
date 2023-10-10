@@ -18,7 +18,16 @@ export class HomeService {
   createTask(task: Task) {
     return this.http.post(this.urlBackend, task);
   }
-  readTasks() {}
-  updateTask() {}
-  deleteTask() {}
+
+  readTasks() {
+    return this.http.get<any>(this.urlBackend);
+  }
+
+  updateTask(task: Task) {
+    return this.http.put(`${this.urlBackend}/${task._id}`, task);
+  }
+
+  deleteTask(id: string) {
+    return this.http.delete(`${this.urlBackend}/${id}`);
+  }
 }

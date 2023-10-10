@@ -1,5 +1,10 @@
 <main class="container my-5">
-  <form #taskForm="ngForm" (ngSubmit)="addTask(taskForm)">
+  <form #taskForm="ngForm" (ngSubmit)="handleSubmitTask(taskForm)">
+    <input
+      type="hidden"
+      name="_id"
+      [(ngModel)]="homeService.selectedTask._id"
+    />
     <div class="mb-3">
       <label for="name" class="form-label">Nombre de la tarea</label>
       <input
@@ -10,16 +15,41 @@
         [(ngModel)]="homeService.selectedTask.name"
       />
     </div>
-    <div class="mb-3 form-check">
-      <input
-        type="checkbox"
-        class="form-check-input"
-        id="completed"
-        name="completed"
-        [(ngModel)]="homeService.selectedTask.completed"
-      />
-      <label class="form-check-label" for="completed">Completada</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Crear</button>
+
+    <ng-container *ngIf="homeService.selectedTask._id; else create">
+      <div class="mb-3 form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="completed"
+          name="completed"
+          [(ngModel)]="homeService.selectedTask.completed"
+        />
+        <label class="form-check-label" for="completed">Completada</label>
+      </div>
+      <button type="submit" class="btn btn-warning">Actualizar</button>
+    </ng-container>
+    <ng-template #create>
+      <button type="submit" class="btn btn-primary">Crear</button>
+    </ng-template>
   </form>
+  <ul class="list-group" *ngFor="let task of homeService.tasks">
+    <li
+      class="list-group-item my-2 d-flex justify-content-between align-items-center"
+    >
+      <div>{{ task.name }}</div>
+      <div class="d-flex gap-4">
+        <button type="button" class="btn btn-info" (click)="editTask(task)">
+          Editar
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="removeTask(task._id)"
+        >
+          Eliminar
+        </button>
+      </div>
+    </li>
+  </ul>
 </main>
