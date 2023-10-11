@@ -144,3 +144,39 @@
 - Algoritmia
 - Wireframes
 - Paradigmas de programación
+- Bootstrap
+- NodeJS
+- npmJS
+- package.json file
+- gitignore file
+* ExpressJS
+  - Servidor
+  - Rutas
+  - Controladores
+  - Esquemas
+  - Modelos
+- Cliente HTTP
+- Verbos HTTP
+- Rest API
+* Mongoose
+  - ODM
+  - Conexión a la base de datos
+Variables de entorno
+- MongoDB
+- CRUD
+* TypeScript
+  - Tipado fuerte
+  - Captura temprana de errores
+  - JavaScript confiable
+* Angular
+  - Angular CLI
+  * Proyecto
+    - Estructura
+  * Componentes
+    - Ciclo de vida
+  - Enrutamientos
+  - Guards
+  - Servicios
+  - Directivas
+  - Enlace bidireccional
+  - Inyección de dependencias
