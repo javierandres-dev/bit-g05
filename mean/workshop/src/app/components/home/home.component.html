@@ -1,4 +1,6 @@
 <main class="container my-5">
+  <h1 class="mt-5">Tasks</h1>
+  <h2>Hello!</h2>
   <form #taskForm="ngForm" (ngSubmit)="handleSubmitTask(taskForm)">
     <input
       type="hidden"
@@ -15,7 +17,6 @@
         [(ngModel)]="homeService.selectedTask.name"
       />
     </div>
-
     <ng-container *ngIf="homeService.selectedTask._id; else create">
       <div class="mb-3 form-check">
         <input
@@ -32,6 +33,10 @@
     <ng-template #create>
       <button type="submit" class="btn btn-primary">Crear</button>
     </ng-template>
+    <span class="mx-2"></span>
+    <button type="reset" class="btn btn-primary" (click)="resetForm(taskForm)">
+      Limpiar
+    </button>
   </form>
   <ul class="list-group" *ngFor="let task of homeService.tasks">
     <li

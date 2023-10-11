@@ -77,4 +77,13 @@ export class HomeComponent {
       );
     }
   }
+
+  resetForm(form: NgForm) {
+    form.reset();
+    this.homeService.selectedTask = {
+      name: '',
+      completed: false,
+    };
+    this.getAllTasks();
+  }
 }
