@@ -5,12 +5,13 @@ const getToken = require('../helpers/gets');
 const usersController = {
   createUser: async (request, response) => {
     try {
-      const { name, email, password } = request.body;
+      const { name, email, password, dateOfBirth } = request.body;
       const hashPassword = await bcrypt.hash(password, 10);
       const newUser = new UserModel({
         name,
         email,
         password: hashPassword,
+        dateOfBirth,
       });
       const createdUser = await newUser.save();
       const token = await getToken({

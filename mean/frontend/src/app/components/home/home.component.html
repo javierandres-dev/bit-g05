@@ -220,37 +220,32 @@
       obcaecati voluptatum dolores temporibus asperiores facilis necessitatibus
       nemo eligendi minima eveniet reiciendis.
     </p>
-    <form>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <form (submit)="handleSubmit()">
+      <div class="input-group mb-3">
+        <img src="{{ urlImg }}" class="img-thumbnail" alt="alternative text" />
+        <label class="input-group-text" for="inputGroupFile01">URL Image</label>
         <input
-          type="email"
+          type="text"
           class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-        />
-        <div id="emailHelp" class="form-text">
-          We'll never share your email with anyone else.
-        </div>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="exampleInputPassword1"
+          id="inputGroupFile01"
+          name="urlImg"
+          [(ngModel)]="urlImg"
         />
       </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <div class="input-group">
-        <span class="input-group-text">With textarea</span>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+      <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupFile01">Date</label>
+        <input
+          type="date"
+          class="form-control"
+          id="inputGroupFile01"
+          name="date"
+          [(ngModel)]="outData.date"
+        />
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <p>Input: {{ inData.date }}</p>
+    <p>output: {{ inData.formattedDate }}</p>
   </section>
 </main>
 <app-bottom></app-bottom>
