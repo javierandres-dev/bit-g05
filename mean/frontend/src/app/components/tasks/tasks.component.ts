@@ -73,6 +73,10 @@ export class TasksComponent {
     );
   }
 
+  viewTask(task: any) {
+    this.taskService.selectedTask = task;
+  }
+
   editTask(task: any) {
     this.taskService.selectedTask = task;
   }

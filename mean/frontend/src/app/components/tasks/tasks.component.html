@@ -45,7 +45,15 @@
     >
       <div>{{ task.name }}</div>
       <div class="d-flex gap-4">
-        <button type="button" class="btn btn-info" (click)="editTask(task)">
+        <button
+          type="button"
+          class="btn btn-info"
+          routerLink="/task/{{ task._id }}"
+          (click)="viewTask(task)"
+        >
+          View
+        </button>
+        <button type="button" class="btn btn-warning" (click)="editTask(task)">
           Edit
         </button>
         <button
